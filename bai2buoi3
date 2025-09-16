@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thông tin sinh viên</title>
+</head>
+<body>
+    <h2>Thông tin đã nhận được</h2>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $mssv = $_POST["mssv"];
+        $hoten = $_POST["hoten"];
+        $gioitinh = $_POST["gioitinh"];
+        $ngonngu = isset($_POST["ngonngu"]) ? implode(", ", $_POST["ngonngu"]) : "Không chọn";
+        $thanhpho = $_POST["thanhpho"];
+        $tinnhan = $_POST["tinnhan"];
+
+        echo "MSSV: $mssv <br>";
+        echo "Họ tên: $hoten <br>";
+        echo "Giới tính: $gioitinh <br>";
+        echo "Ngôn ngữ lập trình: $ngonngu <br>";
+        echo "Thành phố: $thanhpho <br>";
+        echo "Tin nhắn: $tinnhan <br>";
+    } else {
+        echo "Chưa có dữ liệu nào được gửi!";
+    }
+    ?>
+</body>
+</html>
