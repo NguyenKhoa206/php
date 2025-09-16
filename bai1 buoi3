@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Form nhập thông tin</title>
+</head>
+<body>
+    <h3>Nhập thông tin</h3>
+    <form action="info.php" method="post">
+        MSSV: <input type="text" name="mssv" value=""><br><br>
+        Họ Tên: <input type="text" name="hoten" value=""><br><br>
+        
+        Giới Tính:
+        <input type="radio" name="gioitinh" value="Nam"> Nam
+        <input type="radio" name="gioitinh" value="Nữ"> Nữ
+        <br><br>
+        
+        Ngôn ngữ lập trình:
+        <input type="checkbox" name="ngonngu[]" value="C++"> C++
+        <input type="checkbox" name="ngonngu[]" value="PHP"> PHP
+        <br><br>
+        
+        Thành phố:
+        <select name="thanhpho">
+            <option value="Sài Gòn">Sài Gòn</option>
+            <option value="Đà Nẵng">Đà Nẵng</option>
+            <option value="Huế">Huế</option>
+            <option value="Bến Tre">Bến Tre</option>
+        </select>
+        <br><br>
+        
+        Tin nhắn:<br>
+        <textarea name="tinnhan" cols="30" rows="8"></textarea><br><br>
+        
+        <input type="submit" value="Gửi">
+    </form>
+</body>
+</html>
